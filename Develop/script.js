@@ -23,23 +23,52 @@ function writePassword() {
   console.log("Password length " + charLength);
 
   var lowerConfirm = window.confirm("Would you like to include lower case letters?");
+  if (lowerConfirm) {
+    window.alert("Lower case letters will be included");
+  }
+  else if (!lowerConfirm) {
+    window.alert("Lower case letters will NOT be included");
+  }
   console.log(" lowerConfirm is " + lowerConfirm);
 
   var upperConfirm = window.confirm("Would you like to include upper case letters?");
+  if (upperConfirm) {
+    window.alert("Upper case letters will be included");
+  }
+  else if (!upperConfirm) {
+    window.alert("Upper case letters will NOT be included");
+  }
   console.log(" upperConfirm is " + upperConfirm);
 
   var numberConfirm = window.confirm("Would you like to include numbers?");
+  if (numberConfirm) {
+    window.alert("Numbers will be included");
+  }
+  else if (!numberConfirm) {
+    window.alert("Numbers will NOT be included");
+  }
   console.log(" numberConfirm is " + numberConfirm);
 
   var characterConfirm = window.confirm("Would you like to include special characters?");
+  if (characterConfirm) {
+    window.alert("Special characters will be included");
+  }
+  else if (!characterConfirm) {
+    window.alert("Special characters will NOT be included");
+  }
   console.log(" characterConfirm is " + characterConfirm);
 
+  if (!lowerConfirm && !upperConfirm && !numberConfirm && !characterConfirm) {
+    window.alert("You must select at least one criteria silly!!");
+    writePassword();
+  }
+
   
-  var shuffle = lowerCase.sort(() => Math.random() - 0.5);
-  var password = shuffle.slice(0, charLength)
-
-
-
+  
+  
+  
+  //var shuffle = lowerCase.sort(() => Math.random() - 0.5);
+  //var password = shuffle.slice(0, charLength)
   //var password = lowerCase[Math.floor(Math.random() * lowerCase.length)];
   //var password = generatePassword();
   //var password = ("TEST");
