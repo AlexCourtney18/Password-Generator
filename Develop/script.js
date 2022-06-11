@@ -35,6 +35,7 @@ function writePassword() {
   console.log(" characterConfirm is " + characterConfirm);
 
   
+  
   //var password = generatePassword();
   var password = ("TEST");
   var passwordText = document.querySelector("#password");
