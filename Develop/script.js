@@ -35,9 +35,14 @@ function writePassword() {
   console.log(" characterConfirm is " + characterConfirm);
 
   
-  
+  var shuffle = lowerCase.sort(() => Math.random() - 0.5);
+  var password = shuffle.slice(0, charLength)
+
+
+
+  //var password = lowerCase[Math.floor(Math.random() * lowerCase.length)];
   //var password = generatePassword();
-  var password = ("TEST");
+  //var password = ("TEST");
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
