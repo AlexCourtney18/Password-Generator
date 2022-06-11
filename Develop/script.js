@@ -11,7 +11,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var charLength = window.prompt("How long would you like your password to be? Please enter a length between 8-128 characters.");
+  var charLength = parseInt(window.prompt("How long would you like your password to be? Please enter a length between 8-128 characters."));
   if (charLength < 8) {
     window.alert("The password is too short!");
     writePassword();
@@ -63,8 +63,19 @@ function writePassword() {
     writePassword();
   }
 
+  // Criteria possiblity statements
+  else if (lowerConfirm && upperConfirm && numberConfirm && characterConfirm) {
+    pw = lowerCase.concat(upperCase, number, character)
+  }
+
+  else if (lowerConfirm && upperConfirm && numberConfirm) {
+    pw= lowerCase.concat(upperCase, number);
+  }
+
   
-  
+  for (var i = 0; i < charLength; i++) {
+    var password = lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  }
   
   
   //var shuffle = lowerCase.sort(() => Math.random() - 0.5);
