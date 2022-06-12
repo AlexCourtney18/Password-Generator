@@ -65,16 +65,67 @@ function writePassword() {
 
   // Criteria possiblity statements
   else if (lowerConfirm && upperConfirm && numberConfirm && characterConfirm) {
-    pw = lowerCase.concat(upperCase, number, character)
+    pw = lowerCase.concat(upperCase, number, character);
   }
 
   else if (lowerConfirm && upperConfirm && numberConfirm) {
-    pw= lowerCase.concat(upperCase, number);
+    pw = lowerCase.concat(upperCase, number);
   }
 
-  
+  else if (lowerConfirm && upperConfirm && characterConfirm) {
+    pw = lowerCase.concat(upperCase, character);
+  }
+
+  else if (lowerConfirm && numberConfirm && characterConfirm) {
+    pw = lowerCase.concat(number, character);
+  }
+
+  else if (upperConfirm && numberConfirm && characterConfirm) {
+    pw = upperCase.concat(number, character);
+  }
+
+  else if (lowerConfirm && upperConfirm) {
+    pw = lowerCase.concat(upperCase);
+  }
+
+  else if (lowerConfirm && numberConfirm) {
+    pw = lowerCase.concat(number);
+  }
+
+  else if (lowerConfirm && characterConfirm) {
+    pw = lowerCase.concat(character);
+  }
+
+  else if (upperConfirm && numberConfirm) {
+    pw = upperCase.concat(number);
+  }
+
+  else if (upperConfirm && characterConfirm) {
+    pw = upperCase.concat(character);
+  }
+
+  else if (numberConfirm && characterConfirm) {
+    pw = number.concat(character);
+  }
+
+  else if (lowerConfirm) {
+    pw = lowerCase;
+  }
+
+  else if (upperConfirm) {
+    pw = upperCase;
+  }
+
+  else if (numberConfirm) {
+    pw = number;
+  }
+
+  else if (characterConfirm) {
+    pw = character;
+  }
+
   for (var i = 0; i < charLength; i++) {
-    var password = lowerCase[Math.floor(Math.random() * lowerCase.length)];
+    var password = pw[Math.floor(Math.random() * pw.length)];
   }
   
   
