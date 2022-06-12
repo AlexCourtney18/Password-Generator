@@ -16,11 +16,11 @@ function writePassword() {
   var charLength = parseInt(window.prompt("How long would you like your password to be? Please enter a length between 8-128 characters."));
   if (charLength < 8) {
     window.alert("The password is too short!");
-    writePassword();
+    return false;
   }
   if (charLength > 128) {
     window.alert("The password is too long! ");
-    writePassword();
+    return false;
   }
   console.log("Password length " + charLength);
 
