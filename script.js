@@ -130,19 +130,16 @@ function writePassword() {
 
   for (var i = 0; i < charLength; i++) {
     var pass = pw[Math.floor(Math.random() * pw.length)];
-    password.push(pass);
-    let text = password.join("");
+    password[i] = pass;
+
   }
   
-  
-  //var shuffle = lowerCase.sort(() => Math.random() - 0.5);
-  //var password = shuffle.slice(0, charLength)
-  //var password = lowerCase[Math.floor(Math.random() * lowerCase.length)];
-  //var password = generatePassword();
-  //var password = ("TEST");
+
+  let text = password.join("");
+
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = text;
 
 }
 
