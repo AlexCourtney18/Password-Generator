@@ -145,28 +145,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-// Generate Password logic:
-// How long would you like your password to be?
-// If less than 8 characters: error
-// If more than 128 characters: error
-
-// When input is between 8-128 characters, prompt "would you like to include lower case letters?"
-// if confirm: include var lowerCase array
-//if !confirm: no dot include var lowerCase array
-
-// "Would you like to include upper case letters?"
-// If confirm: include var upperCase array
-// If !confirm: do not include var upperCase array
-
-// "Would you like to include numbers?"
-// If confirm: include var number
-// if !confirm: do not include var number
-
-// "Would you like to include special characters?"
-// If confirm: include var character
-// If !confirm: do not include var character
-
-// Generate password var charLength long, include var lowerCase if true, include var upperCase if true, include var number if true, include var character if true
